@@ -8,20 +8,19 @@ h1              { text-align: center; font-size: 28px; }
 th, td        { vertical-align: middle; text-align: right; }   
 
 
-#finaltable:hover td { background-color: #2E9AFE; } /* El estilo que sirve de feedback para saber que
-                                                       tu raton esta situado encima del objeto.*/
+#finaltable:hover td { background-color: #2E9AFE; } 
 
-tr:nth-child(1)    { background-color:#6666FF; } /* estilo para la fila 0 y 1 */
-tr:nth-child(n+2)   { background-color:#00FF66; } /* estilo para las lineas 2 o superior */
+tr:nth-child(1)    { background-color:#6666FF; } 
+tr:nth-child(n+2)   { background-color:#00FF66; } 
 
 input                { text-align: right;  border: none;       }
 textarea             { border: outset; border-color: #9966FF;       }                        
 table                { margin-left: auto; margin-right: auto; border: inset; border-color: white; }
 table.center         { margin-left:auto margin-right:auto; }
-#result              { border-color: blue; }                  /*Estilo de la variable en el javascript */
+#result              { border-color: blue; }                 
 tr.error             { background-color: red; }
 button               { float: right; margin-right: 46% ;}
-.ayuda               { text-align: center;} /* estilo de la clase .ayuda */
+.texto               { text-align: center;} 
 p                    { font-size: 14px; }
 
 body{ background-color:#66CCFF;  /* Gris */ }
