@@ -23,4 +23,9 @@ button               { float: right; margin-right: 46% ;}
 .texto               { text-align: center;} 
 p                    { font-size: 14px; }
 
-body{ background-color:#66CCFF;  /* Gris */ }
+/*body{ background-color:#66CCFF;   Gris */ }
+body
+{
+ background: url('./fondo.jpg') #b0c4de;  /* blue */
+ margin: 5px !important;
+}
