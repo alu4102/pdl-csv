@@ -1,15 +1,16 @@
 var assert = chai.assert;
 
-suite('Resultados de los tests:', function() {
-    test('Generación correcta de plantilla', function() {
-        original.value = "\"Elem1\" , \"Elem2\"";
+suite('Resultado de las pruebas:', function() {
+    test('Creacion correcta de la tabla', function() {
+        original.value = "\"Hola\" , \"Adios\" , \"Mar\" , \"Aire\"";
         calculate();
-		assert.equal(finaltable.innerHTML,'<p>\n</p><table class="center" id="result">\n<tbody><tr>                    <td>Elem1</td>                                  <td>Elem2</td>              </tr>\n</tbody></table>');
+		var expected = '<p>\n</p><table class="center" id="result">\n<tbody><tr>                    <td>Hola</td>                                  <td>Adios</td>                                  <td>Mar</td>                                  <td>Aire</td>              </tr>\n</tbody></table>';
+		assert.equal(finaltable.innerHTML, expected);
     });
-    test('Generación de error al introducir un número incorrecto de elementos', function() {
-        original.value = "Dia, Asignatura \n Lunes, Matemáticas \n Jueves, Inglés, Francés \n Viernes, Biología";
+    test('Fallo al introducir un numero erroneo de elementos', function() {
+        original.value = "Color, Prenda \n Rojo, Pantalon, Falda \n Amarillo, Camisa \n Negro, Chaqueta";
         calculate();
-        assert.match(finaltable.innerHTML, /error/);
+        assert.match(finaltable.innerHTML, /class="error"/);
     });
 
 });
