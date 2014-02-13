@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mocha.css" />
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>    
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <table>
+      <tr>
+        <td><textarea autofocus cols = "80" rows = "5" id="original" style="visibility: hidden"></textarea></td> 
+      </tr>
+    </table>
+    <span class="output" id="finaltable" style="visibility: hidden"></span>
+
+    <script src="chai.js"></script>
+    <script src="mocha.js"></script>
+    <script src="../csv.js"></script>
+
+    <script>mocha.setup('tdd')</script>
+    <script src="tests.js"></script>
+
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
+
+
