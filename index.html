@@ -2,38 +2,28 @@
 
 <html>
   <head>
-     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      <title>Analizador CSV</title>
      <link href="global.css" rel="stylesheet" type="text/css">
-
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>    
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
      <script type="text/javascript" src="csv.js"></script>
-     
-     <script type="text/html"  id="tm" > <% _.each(items, function(name) { %> <td><%= name %></td>  <% }); %> </script>
   </head>
-  
   <body>
     <h1>Analizador de valores separados por comas</h1>
     <div class="texto">
       <p>Escribe una cadena CSV y haz click en el botón "Generar Tabla"</p>
-      <p>El programa generara una tabla con los datos especificados</p>
-      <br>
+      <p>El programa generara una tabla con los datos especificados</p> 
     </div>
-   
     <table>
       <tr>
-        <th>Cadena CSV:</th> 
-        <td><textarea autofocus cols="60" rows="5" id="original"></textarea></td> 
+        <th>Cadena CSV</th> <!-- autofocus attribute is HTML5 -->
+        <td><textarea autofocus cols = "60" rows = "5" id="original"></textarea></td> 
       </tr>
-    </table> 
-	
+    </table><br>
+	<button type="button">Generar Tabla</button>
     <br>
-    <button type="button">Generar Tabla</button><br>
-	<br>
 	<br>
     <span class="output" id="finaltable"></span>
-    <div id="fallo"></div>
   </body>
-  
 </html>
